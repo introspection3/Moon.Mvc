@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{EBEF9BCE-4DF4-49F3-9884-41E0C8C41CD8}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Moon.Mvc</RootNamespace>
+    <AssemblyName>Moon.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>None</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation, Version=5.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Moon.Orm, Version=6.2.6121.30733, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\Moon.Orm.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AreaAttribute.cs" />
+    <Compile Include="Attributes\AspectAttribute.cs" />
+    <Compile Include="Common\AspectResultType.cs" />
+    <Compile Include="Common\AspectAttributePriority.cs" />
+    <Compile Include="Common\Captcha\ICaptcha.cs" />
+    <Compile Include="Common\SelectList.cs" />
+    <Compile Include="Common\SelectListItem.cs" />
+    <Compile Include="Common\Captcha\ThreeDCaptcha.cs" />
+    <Compile Include="ExpressionUtil\BinaryExpressionFingerprint.cs" />
+    <Compile Include="ExpressionUtil\CachedExpressionCompiler.cs" />
+    <Compile Include="ExpressionUtil\ConditionalExpressionFingerprint.cs" />
+    <Compile Include="ExpressionUtil\ConstantExpressionFingerprint.cs" />
+    <Compile Include="ExpressionUtil\DefaultExpressionFingerprint.cs" />
+    <Compile Include="ExpressionUtil\ExpressionFingerprint.cs" />
+    <Compile Include="ExpressionUtil\ExpressionFingerprintChain.cs" />
+    <Compile Include="ExpressionUtil\FingerprintingExpressionVisitor.cs" />
+    <Compile Include="ExpressionUtil\HashCodeCombiner.cs" />
+    <Compile Include="ExpressionUtil\Hoisted`2.cs" />
+    <Compile Include="ExpressionUtil\HoistingExpressionVisitor.cs" />
+    <Compile Include="ExpressionUtil\IndexExpressionFingerprint.cs" />
+    <Compile Include="ExpressionUtil\LambdaExpressionFingerprint.cs" />
+    <Compile Include="ExpressionUtil\MemberExpressionFingerprint.cs" />
+    <Compile Include="ExpressionUtil\MethodCallExpressionFingerprint.cs" />
+    <Compile Include="ExpressionUtil\ParameterExpressionFingerprint.cs" />
+    <Compile Include="ExpressionUtil\TypeBinaryExpressionFingerprint.cs" />
+    <Compile Include="ExpressionUtil\UnaryExpressionFingerprint.cs" />
+    <Compile Include="FluentLocal\FluentValidationResource1.Designer.cs" />
+    <Compile Include="Results\JsonpResult.cs" />
+    <Compile Include="Util\AreaUtil.cs" />
+    <Compile Include="Util\ControlUtil.cs" />
+    <Compile Include="Util\CookieSecurityUtil.cs" />
+    <Compile Include="Util\ControllerAssmeblyUtil.cs" />
+    <Compile Include="Results\BinaryResult.cs" />
+    <Compile Include="Roles\CommonFormAuthenAttribute.cs" />
+    <Compile Include="Roles\ControllerXml.cs" />
+    <Compile Include="Common\ErrorResultReturnType.cs" />
+    <Compile Include="Util\ExpressionHelper.cs" />
+    <Compile Include="Util\HttpWebRequestHelper.cs" />
+    <Compile Include="Results\JsonResult.cs" />
+    <Compile Include="Validation\MoonBaseFluent.cs" />
+    <Compile Include="Common\Captcha\RandomImage.cs" />
+    <Compile Include="Attributes\Client304Expires.cs" />
+    <Compile Include="Attributes\ClientExpires.cs" />
+    <Compile Include="Results\DataResult.cs" />
+    <Compile Include="Handlers\RequestHandler.cs" />
+    <Compile Include="Util\MPage.cs" />
+    <Compile Include="Common\RquestType.cs" />
+    <Compile Include="Validation\ValidatorAttribute.cs" />
+    <Compile Include="ViewEngine\GenericPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewEngine\MHtmlHelper`1.cs" />
+    <Compile Include="Util\MiddleProcessUtil.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Util\FastInvokeHandler.cs" />
+    <Compile Include="Util\MethodInvokeUtil.cs" />
+    <Compile Include="Controllers\MoonController.cs" />
+    <Compile Include="Handlers\MoonServiceHandler.cs" />
+    <Compile Include="Common\GlobalData.cs" />
+    <Compile Include="MoonServiceModule.cs" />
+    <Compile Include="Results\JsonStrResult.cs" />
+    <Compile Include="Util\ParameterUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\RenderUtil.cs" />
+    <Compile Include="Results\ResultAttribute.cs" />
+    <Compile Include="Roles\ActionRoleManager.cs" />
+    <Compile Include="Common\RouteInfo.cs" />
+    <Compile Include="ViewEngine\MMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewEngine\Url.cs" />
+    <Compile Include="ViewEngine\ViewPageControlBuilder.cs" />
+    <Compile Include="ViewEngine\MUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewEngine\MViewPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewEngine\GenericUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewEngine\ViewType.cs" />
+    <Compile Include="ViewEngine\ViewTypeParserFilter.cs" />
+    <Compile Include="Util\WebSecurityUtil.cs" />
+    <Compile Include="Results\TempalateResultAttribute.cs" />
+    <Compile Include="Common\TempateEngine.cs" />
+    <Compile Include="Attributes\TimeLogAttribute.cs" />
+    <Compile Include="Util\UrlRouteCenter.cs" />
+    <Compile Include="Util\UrlUtil.cs" />
+    <Compile Include="Validation\ValidationFailure.cs" />
+    <Compile Include="Validation\ValidationResult.cs" />
+    <Compile Include="Util\ValidationResultUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="authen.config" />
+    <None Include="Roles\role.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dlls\FluentValidation.dll" />
+    <Content Include="dlls\FluentValidation.pdb" />
+    <Content Include="dlls\FluentValidation.xml" />
+    <Content Include="Scripts\m_jq_o.ajax.js" />
+    <Content Include="Scripts\m_s.cookie.js" />
+    <Content Include="Scripts\m_o.map.js" />
+    <Content Include="Scripts\m_s.form.js" />
+    <Content Include="Scripts\m_s.time.js" />
+    <Content Include="Scripts\m_o.url.js" />
+    <Content Include="Scripts\m_jq_s.pager.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dlls\da\" />
+    <Folder Include="dlls\de\" />
+    <Folder Include="dlls\es\" />
+    <Folder Include="dlls\fi\" />
+    <Folder Include="dlls\fr\" />
+    <Folder Include="dlls\it\" />
+    <Folder Include="dlls\ko\" />
+    <Folder Include="dlls\nl\" />
+    <Folder Include="dlls\pl\" />
+    <Folder Include="dlls\pt\" />
+    <Folder Include="dlls\ru\" />
+    <Folder Include="dlls\sv\" />
+    <Folder Include="dlls\tr\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FluentLocal\FluentLocal.resx" />
+    <EmbeddedResource Include="FluentLocal\FluentValidationResource.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

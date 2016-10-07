@@ -1,0 +1,14 @@
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/NewSite.Master"   Inherits="Moon.Mvc.GenericPage`1[[System.Int32,mscorlib]]" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
+    Ê×Ò³
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Css" runat="server">
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Head" runat="server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="Body" runat="server">
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="Scripts" runat="server">
+
+</asp:Content>

@@ -1,0 +1,3 @@
+支持所有的关系新数据库(只要改数据库公司提供.NET支持)
+支持mono+linux下开发
+http://lko2o.com/moon

@@ -1,0 +1,3 @@
+将web应用程序下的[工作目录]默认设置为根目录
+下的MOON_WORK_DIRECTORY_PATH目录下.
+防止某些情况下,IIS重启.

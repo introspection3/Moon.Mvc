@@ -1,0 +1,4 @@
+    <pages pageParserFilterType="Moon.Mvc.ViewTypeParserFilter, Moon.Mvc"
+                  pageBaseType="Moon.Mvc.MViewPage,Moon.Mvc"  enableViewState="false" enableViewStateMac="false"
+                     autoEventWireup="false"
+           >

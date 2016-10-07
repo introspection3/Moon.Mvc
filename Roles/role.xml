@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CommonFormAuthen>
+  <Controller controllerFullName="Moon.MvcTest.HomeController">
+    <Action name="Index">Admin</Action>
+    <Action name="Index2">Manager,Admin</Action>
+    <Action name="Contact">Manager</Action>
+  </Controller>
+</CommonFormAuthen>

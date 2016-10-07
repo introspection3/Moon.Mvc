@@ -1,0 +1,10 @@
+http://manpages.ubuntu.com/manpages/precise/man1/xsp.1.html
+XSP - Mono ASP.NET Web Server说明
+
+
+
+http://www.davidloo.com/?p=479
+如何让 ASP.NET MVC 3 (Razor) 在 Ubuntu 14.04运行
+
+
+sudo apt-get install mysql-server
